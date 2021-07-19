@@ -1,12 +1,20 @@
 
-import '../styles/style.scss';
+import '../styles/global.scss';
 import getConfig from "next/config";
 import fetch from 'isomorphic-unfetch';
 import Header from '../components/header/Header';
 import MainLayout from '../components/MainLayout';
 
+const { publicRuntimeConfig } = getConfig();
 
-function MyApp({ Component, pageProps, navigation }) {
+MyApp.getInitialProps = async () => {
+    const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`);
+    const navigation = await res.json();
+
+    return { navigation }
+}
+
+export default function MyApp({ Component, pageProps, navigation }) {
   return (
     <MainLayout>
       <Header navigation={navigation}/>
@@ -14,14 +22,4 @@ function MyApp({ Component, pageProps, navigation }) {
       <Component {...pageProps} />
     </MainLayout>
   )
-}
-
-export default MyApp
-const { publicRuntimeConfig } = getConfig();
-
-MyApp.getInitialProps = async () => {
-  const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`);
-  const navigation = await res.json();
-
-  return { navigation }
 }
