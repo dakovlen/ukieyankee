@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Footer from "../components/footer/Footer";
+import Footer from "components/footer/Footer";
 
 export default function MainLayout({ children, title="Base Title" }) {
     return (

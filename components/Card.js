@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 export default function Card({movie}) {
   return (
@@ -6,8 +7,8 @@ export default function Card({movie}) {
      <img src={movie.poster.name} alt=""/>
      <h3>{movie.title}</h3>
 
-     <Link href="/">
-     <a>More about movie</a>
+     <Link href="/movies/[genre]/[slug]" as={`/movies/${movie.genre.slug}/${movie.slug}`}>
+        <a>More about movie</a>
      </Link>
    </div>
   )

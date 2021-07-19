@@ -1,6 +1,6 @@
 import MainLayout from "../components/MainLayout";
 import fetch from "isomorphic-unfetch";
-import Card from "../components/Card";
+import Card from "components/Card";
 
 export default function Home({ movies }) {
   return (
