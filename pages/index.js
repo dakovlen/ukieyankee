@@ -1,4 +1,3 @@
-import MainLayout from "../components/MainLayout";
 import fetch from "isomorphic-unfetch";
 import Card from "components/Card";
 
