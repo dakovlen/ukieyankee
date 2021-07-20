@@ -9,9 +9,10 @@ function Movie({ movie }) {
     }
 
     return (
-        <div>
+        <div className="container">
             <NextSeo {...SEO} />
-            <div>{ movie.title }</div>
+
+            <h3>{ movie.title }</h3>
             <div>
                 <p>{ movie.description }</p>
             </div>

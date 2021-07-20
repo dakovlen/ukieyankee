@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,
 body,
 #app,
-#__next{
+#__next {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -49,7 +50,7 @@ p:not([class]) {
 }
 
 ul:not([class]),
-ol:not([class])  {
+ol:not([class]) {
   padding-left: 2rem;
 }
 
@@ -67,10 +68,20 @@ img {
   max-width: 100%;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
 }
 
 .movies-container {
@@ -88,6 +99,7 @@ img {
     &:first-child {
       margin-left: 0;
     }
+
     a {
       color: $white;
       font-size: 1.6rem;

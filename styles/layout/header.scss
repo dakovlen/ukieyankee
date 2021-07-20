@@ -6,6 +6,12 @@
   padding: 10px 0;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .logo-link {
   font-size: 2rem;
   color: $white;
