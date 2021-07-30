@@ -13,7 +13,8 @@ export default function Navigation({ navigation }) {
               <a className={router.pathname === item.slug ? 'active' : ''}>{item.title}</a>
             </Link>
           </li>
-        ))}
+        ))
+      }
     </ul>
   )
 }

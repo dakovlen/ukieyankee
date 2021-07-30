@@ -57,6 +57,7 @@ ol:not([class]) {
 main,
 .main {
   flex: 1 0 auto;
+  font-size: 2rem;
 }
 
 .container {
@@ -87,6 +88,17 @@ h4 {
 .movies-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.movies-box {
+
+
+  img {
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
 }
 
 .menu {

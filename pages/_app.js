@@ -14,7 +14,9 @@ MyApp.getInitialProps = async () => {
     const res = await fetch(`${publicRuntimeConfig.API_URL}/navigations`);
     const navigation = await res.json();
 
-    return {navigation}
+    return {
+        navigation
+    }
 }
 
 export default function MyApp({Component, pageProps, navigation}) {

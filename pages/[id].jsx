@@ -1,11 +1,27 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export default function About({ content }) {
+function Page({ content }) {
+    const router = useRouter();
+
     return (
         <div className="container">
             <h2>{content.title}</h2>
             <div className="body">{content.body}</div>
+
+            <br />
+            <br />
+
+            <Link
+                href={router.asPath}
+                locale={router.locale === "en" ? "ru" : "en"}
+            >
+                <a>
+                    {router.locale === "en"
+                        ? "Prikaži hrvatski prijevod"
+                        : "Show english translation"}
+                </a>
+            </Link>
         </div>
     );
 }
@@ -31,3 +47,5 @@ export const getServerSideProps = async (context) => {
         },
     };
 };
+
+export default Page;
